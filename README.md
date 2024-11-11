@@ -1,12 +1,15 @@
 # Resolvedor del Cubo de Rubik 2x2 en Haskell
 
-Este proyecto implementa un resolvedor para el cubo de Rubik 2x2 en el lenguaje Haskell. El código permite representar el cubo, realizar movimientos básicos y aplicar secuencias de movimientos para resolver el cubo.
+Este proyecto implementa un resolvedor para el cubo de Rubik 2x2 en el lenguaje Haskell utilizando el **método Ortega**. Este método permite resolver el cubo de manera eficiente en tres pasos: resolver una capa, orientar la otra capa, y, finalmente, permutar las piezas para alinear el cubo completo.
 
 ## Características del Proyecto
 
 - **Representación del Cubo**: Cada pieza y cara del cubo está representada como una estructura de datos, permitiendo modelar el cubo de Rubik 2x2 de manera programática.
 - **Movimientos Básicos**: Incluye movimientos como giros horarios y antihorarios de cada cara del cubo.
-- **Solución en Capas**: El algoritmo de solución sigue un enfoque en capas, resolviendo primero la cara blanca, luego la cara amarilla, y finalmente las capas del medio para alinear las piezas.
+- **Resolución en Tres Etapas (Método Ortega)**:
+  - **Primera Capa**: Se resuelve una cara del cubo (cara blanca).
+  - **Orientación de la Segunda Capa**: Se orienta la segunda capa (cara amarilla) mientras la primera permanece intacta.
+  - **Permutación Final**: Finalmente, se permutan las piezas restantes para alinear el cubo completo.
 
 ## Estructuras de Datos
 
@@ -26,9 +29,9 @@ Cada movimiento cambia la disposición de las piezas en el cubo, permitiendo sim
 
 ## Resolución del Cubo
 
-1. **Resolver Cara Blanca**: Primero se resuelve la cara blanca y se la coloca en la parte inferior.
-2. **Resolver Cara Amarilla**: Luego, la cara amarilla se resuelve y se coloca en la parte superior.
-3. **Resolver las Capas del Medio**: Finalmente, se alinean las capas del medio.
+1. **Resolver la Primera Capa (Blanca)**: Primero se resuelve la cara blanca y se la coloca en la parte inferior.
+2. **Orientar la Segunda Capa (Amarilla)**: Luego, la cara amarilla se resuelve y se coloca en la parte superior.
+3. **Permutación de las Capas Medias**: Finalmente, se permutan las piezas de las capas medias y de la segunda capa para alinear el cubo en su totalidad.
 
 ## Ejecución del Proyecto
 
@@ -44,3 +47,4 @@ main :: IO ()
 main = do
     let cubo = cuboEjemplo -- Define un cubo con una configuración inicial
     proyecto cubo          -- Ejecuta el resolvedor
+
