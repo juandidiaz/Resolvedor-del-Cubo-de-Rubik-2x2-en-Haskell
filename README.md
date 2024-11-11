@@ -47,4 +47,9 @@ main :: IO ()
 main = do
     let cubo = cuboEjemplo -- Define un cubo con una configuración inicial
     proyecto cubo          -- Ejecuta el resolvedor
+```
+### Requisitos
+Haskell instalado en el sistema para compilar y ejecutar el código.
+### Autor
+- Juan Díaz
 
